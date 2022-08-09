@@ -1,4 +1,4 @@
-const botscord = require('./lib/index.js');
+const botscord = require('../../index.js');
 var botToken = "";
 var botID = "";
 var botscordToken = "";

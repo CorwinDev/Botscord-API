@@ -6,7 +6,7 @@ version: 1.0.4
 ```js
 const botscord = require('botscord');
 var botscordToken = 'botscordToken'; // Get this from https://botscord.xyz/bot/<botID>/settings
-var client = // Your discord.js client
+var client = "Discord.js Client Object";// Your discord.js client
 const botscord_client = new botscord(botscordToken, client);
 
 ```
