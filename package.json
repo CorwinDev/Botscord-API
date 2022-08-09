@@ -1,0 +1,22 @@
+{
+  "name": "botscord-api",
+  "version": "1.0.4",
+  "description": "This is the official BotsCord-api!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BotsCord/botscord-api.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Corwin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BotsCord/botscord-api/issues"
+  },
+  "homepage": "https://github.com/BotsCord/botscord-api#readme"
+}
