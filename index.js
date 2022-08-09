@@ -1,4 +1,5 @@
-const fetch = require("node-fetch");
+const fetch = (...args) =>
+    import('node-fetch').then(({ default: fetch }) => fetch(...args));
 module.exports = class VOID {
     constructor(token, client) {
         this['token'] = token;
@@ -6,8 +7,8 @@ module.exports = class VOID {
         return this;
     }
 
-    serverCount(message) {
-        fetch(`http://localhost:3000/api/v1/servers`, {
+    async serverCount() {
+        var response = await fetch(`http://localhost:3000/api/v1/bots/servers`, {
             method: 'POST',
             headers: {
                 'serverCount': this.client.guilds.cache.size,
@@ -15,21 +16,31 @@ module.exports = class VOID {
                 'Authorization': this.token
             },
         });
-        return true;
+        if (response.status === 200) {
+            return "Server count updated";
+        } else {
+            return response.status;
+        }
     }
 
     async search(id) {
-        return await fetch(`https://botscord.site/api/bots/${id}`, {
-            method: 'GET'
+        var response = await fetch(`http://localhost:3000/api/v1/bots/search/${id}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': this.token
+            },
         })
-            .then(res => res.json()).then(json => json);
+        return response.json();
+
+
     }
 
     async hasVoted(id) {
-        return await fetch(`https://botscord.site/api/bots/check/${id}`, {
+        var response = await fetch(`http://localhost:3000/api/v1/bots/check/${id}`, {
             method: 'GET', headers: {
                 'Content-Type': 'application/json', 'Authorization': this.token
             }
-        }).then(res => res.json()).then(async json => json.voted);
+        })
+        return response.json();
     }
 }

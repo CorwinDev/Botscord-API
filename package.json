@@ -1,6 +1,6 @@
 {
   "name": "botscord-api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is the official BotsCord-api!",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/BotsCord/botscord-api/issues"
   },
-  "homepage": "https://github.com/BotsCord/botscord-api#readme"
+  "homepage": "https://github.com/BotsCord/botscord-api#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
 }
