@@ -1,6 +1,6 @@
 {
   "name": "botscord-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This is the official BotsCord-api!",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BotsCord/botscord-api.git"
+    "url": "git+https://github.com/CorwinDev/Botscord-API.git"
   },
   "keywords": [
     "api"
@@ -16,9 +16,9 @@
   "author": "Corwin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BotsCord/botscord-api/issues"
+    "url": "https://github.com/CorwinDev/Botscord-API/issues"
   },
-  "homepage": "https://github.com/BotsCord/botscord-api#readme",
+  "homepage": "https://github.com/CorwinDev/Botscord-API#readme",
   "dependencies": {
     "node-fetch": "^3.2.10"
   }
